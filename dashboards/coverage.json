@@ -1,0 +1,98 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus / Mimir",
+      "description": "Prometheus or Mimir datasource receiving BlazorAmpowering metrics via OTLP",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "panel",
+      "id": "blazorampowering-panel",
+      "name": "BlazorAmpowering",
+      "version": "1.0.0"
+    },
+    {
+      "type": "datasource",
+      "id": "prometheus",
+      "name": "Prometheus",
+      "version": "1.0.0"
+    }
+  ],
+  "annotations": { "list": [] },
+  "description": "Production code coverage for .NET and Blazor applications — powered by BlazorAmpowering.Coverage and BlazorAmpowering.Coverage.Runtime.",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
+      "fieldConfig": { "defaults": {}, "overrides": [] },
+      "gridPos": { "h": 24, "w": 24, "x": 0, "y": 0 },
+      "id": 1,
+      "options": {
+        "refIdHit": "A",
+        "refIdCalls": "B",
+        "queryHit": "coverage_method_hit{service_name=\"$service_name\"} * on(method_id) group_left(class,method,file,line) coverage_method_info{service_name=\"$service_name\"}",
+        "queryCalls": "coverage_method_calls_total{service_name=\"$service_name\"} * on(method_id) group_left(class,method,file,line) coverage_method_info{service_name=\"$service_name\"}"
+      },
+      "targets": [
+        {
+          "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
+          "expr": "coverage_method_hit{service_name=\"$service_name\"} * on(method_id) group_left(class,method,file,line) coverage_method_info{service_name=\"$service_name\"}",
+          "instant": true,
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
+          "expr": "coverage_method_calls_total{service_name=\"$service_name\"} * on(method_id) group_left(class,method,file,line) coverage_method_info{service_name=\"$service_name\"}",
+          "instant": true,
+          "legendFormat": "",
+          "refId": "B"
+        }
+      ],
+      "title": "BlazorAmpowering Coverage",
+      "type": "blazorampowering-panel"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 38,
+  "tags": ["blazor", "dotnet", "coverage", "observability"],
+  "templating": {
+    "list": [
+      {
+        "current": {},
+        "hide": 0,
+        "includeAll": false,
+        "label": "Service",
+        "multi": false,
+        "name": "service_name",
+        "options": [],
+        "query": {
+          "query": "label_values(coverage_method_info, service_name)",
+          "refId": "StandardVariableQuery"
+        },
+        "datasource": { "type": "prometheus", "uid": "${DS_PROMETHEUS}" },
+        "definition": "label_values(coverage_method_info, service_name)",
+        "refresh": 2,
+        "regex": "",
+        "sort": 1,
+        "type": "query"
+      }
+    ]
+  },
+  "time": { "from": "now-1h", "to": "now" },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "BlazorAmpowering Coverage",
+  "uid": "blazorampowering-coverage",
+  "version": 0
+}
