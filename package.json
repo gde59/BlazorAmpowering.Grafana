@@ -1,5 +1,5 @@
 {
-  "name": "blazorampowering-coverage-panel",
+  "name": "bamp-panel",
   "version": "1.0.0",
   "private": true,
   "description": "Panel Grafana de couverture de code en production pour BlazorAmpowering",

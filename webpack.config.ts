@@ -23,7 +23,7 @@ const config = (_env: Record<string, unknown>): Configuration => ({
     filename: '[name].js',
     libraryTarget: 'amd',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: 'public/plugins/blazorampowering-panel/',
+    publicPath: 'public/plugins/bamp-panel/',
   },
 
   module: {

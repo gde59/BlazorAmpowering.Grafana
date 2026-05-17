@@ -1,7 +1,7 @@
 {
   "type": "panel",
   "name": "BlazorAmpowering",
-  "id": "blazorampowering-panel",
+  "id": "bamp-panel",
   "info": {
     "description": "Dashboard panel for .NET and Blazor applications via Prometheus / Mimir.",
     "author": { "name": "Gaetan Delpierre" },

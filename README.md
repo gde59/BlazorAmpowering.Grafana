@@ -46,13 +46,13 @@ Search for **BlazorAmpowering** in **Administration → Plugins** and click Inst
 
 1. Download the latest release ZIP from the [GitHub releases page](https://github.com/gde59/BlazorAmpowering.Grafana/releases)
 2. Extract to your Grafana plugins directory:
-   - Linux/macOS: `/var/lib/grafana/plugins/blazorampowering-panel/`
-   - Windows: `C:\Program Files\GrafanaLabs\grafana\data\plugins\blazorampowering-panel\`
+   - Linux/macOS: `/var/lib/grafana/plugins/bamp-panel/`
+   - Windows: `C:\Program Files\GrafanaLabs\grafana\data\plugins\bamp-panel\`
 3. Allow the unsigned plugin in `grafana.ini`:
 
 ```ini
 [plugins]
-allow_loading_unsigned_plugins = blazorampowering-panel
+allow_loading_unsigned_plugins = bamp-panel
 ```
 
 1. Restart Grafana.
