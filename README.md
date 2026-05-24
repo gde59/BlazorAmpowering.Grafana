@@ -7,7 +7,7 @@ It displays a collapsible file → class → method tree with hit/miss status, c
 
 ## What it shows
 
-![Coverage panel showing a file/class/method tree with hit and miss indicators](src/img/screenshot-coverage-panel.png)
+![Coverage panel showing a file/class/method tree with hit and miss indicators](https://raw.githubusercontent.com/gde59/BlazorAmpowering.Grafana/main/src/img/screenshot-coverage-panel.png)
 
 - **Global coverage percentage** with a color-coded progress bar (green ≥ 80 %, orange ≥ 50 %, red < 50 %)
 - **File → class → method tree**, collapsible, sorted alphabetically
@@ -46,13 +46,13 @@ Search for **BlazorAmpowering** in **Administration → Plugins** and click Inst
 
 1. Download the latest release ZIP from the [GitHub releases page](https://github.com/gde59/BlazorAmpowering.Grafana/releases)
 2. Extract to your Grafana plugins directory:
-   - Linux/macOS: `/var/lib/grafana/plugins/bamp-panel/`
-   - Windows: `C:\Program Files\GrafanaLabs\grafana\data\plugins\bamp-panel\`
+   - Linux/macOS: `/var/lib/grafana/plugins/bamp-apm-panel/`
+   - Windows: `C:\Program Files\GrafanaLabs\grafana\data\plugins\bamp-apm-panel\`
 3. Allow the unsigned plugin in `grafana.ini`:
 
 ```ini
 [plugins]
-allow_loading_unsigned_plugins = bamp-panel
+allow_loading_unsigned_plugins = bamp-apm-panel
 ```
 
 1. Restart Grafana.

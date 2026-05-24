@@ -13,7 +13,7 @@
   "__requires": [
     {
       "type": "panel",
-      "id": "blazorampowering-panel",
+      "id": "bamp-apm-panel",
       "name": "BlazorAmpowering",
       "version": "1.0.0"
     },
@@ -60,7 +60,7 @@
         }
       ],
       "title": "BlazorAmpowering Coverage",
-      "type": "blazorampowering-panel"
+      "type": "bamp-apm-panel"
     }
   ],
   "refresh": "30s",
