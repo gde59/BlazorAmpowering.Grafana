@@ -51,6 +51,6 @@
   },
   "packageManager": "npm@11.13.0",
   "overrides": {
-    "serialize-javascript": ">=6.0.2"
+    "serialize-javascript": "7.0.5"
   }
 }

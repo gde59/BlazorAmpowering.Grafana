@@ -14,7 +14,8 @@
     ],
     "version": "1.0.0",
     "updated": "2026-05-17",
-    "keywords": ["blazor", "dotnet", "coverage", "prometheus", "apm", "observability"]
+    "keywords": ["blazor", "dotnet", "coverage", "prometheus", "apm", "observability"],
+    "license": "Apache-2.0"
   },
   "dependencies": {
     "grafanaDependency": ">=10.0.0",
